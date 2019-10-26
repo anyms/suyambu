@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# coding=utf-8
+
+"""
+Copyright (c) 2019 fisherman developers (http://fisherman.lk)
+See the file 'LICENSE' for copying permission
+"""
+
+import math
+
+from core import Console
+from utils import ArgParse
+from utils import system
+
+
+def main():
+    parser = ArgParse(argument_space_count=20, usage="fisherman [options]")
+    parser.add_argument(["-help", "-h"], description="show help", is_flag=True)
+    parser.add_argument(["-payload", "-p"], example="payload", description="specify the payload you want to generate")
+    parser.add_argument(["-host"], example="ip:port", description="specify the listening host and port")
+    parser.add_argument(["-format", "-f"], example="format", description="payload output format")
+    
+    route(parser)
+
+def route(parser):
+    args = parser.parse()
+    
+    if args.help:
+        parser.print_help()
+        return
+    if args.payload is not None:
+        # TODO: send it to generate payload
+        return
+    
+    console = Console()
+    console.cmdloop()
+
+
+if __name__ == "__main__":
+    main()
