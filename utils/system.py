@@ -41,3 +41,8 @@ def chunks(lst, n):
     for i in range(0, len(lst), number_of_list):
         yield lst[i:i + n]
 
+def is_64bit():
+    return (32 << bool(sys.maxsize >> 32)) == 64
+
+def is_32bit():
+    return (32 << bool(sys.maxsize >> 32)) == 32

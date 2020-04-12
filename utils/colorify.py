@@ -2,7 +2,7 @@
 # coding=utf-8
 
 """
-Copyright (c) 2019 fisherman developers (http://fisherman.lk)
+Copyright (c) 2019 suyambu developers (http://suyambu.net/framework)
 See the file 'LICENSE' for copying permission
 """
 
